@@ -15,6 +15,10 @@ import com.golden.gamedev.Game;
 
 
 public class GameFrame extends Game {
+
+	{
+//		distribute = true;
+	}
 	
 	// Screens
 	Screen currentScreen;
@@ -42,6 +46,9 @@ public class GameFrame extends Game {
 		gameImages.add(new ImageResource(getImage("img/dirt_light.png"), "dirt_light", 1));
 		gameImages.add(new ImageResource(getImage("img/dirt_dark.png"), "dirt_dark", 2));
 		gameImages.add(new ImageResource(getImage("img/tower.png"), "tower", 3));
+		
+		gameImages.add(new ImageResource(getImage("img/ui2.png"), "ui", -2));
+		
 		
 		
 		return gameImages;

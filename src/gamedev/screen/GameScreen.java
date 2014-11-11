@@ -27,9 +27,10 @@ public class GameScreen extends Screen {
 			for (int j = 0; j < sizeY; j++) {
 				if(getImage(Level.grid[i][j]) != null)
 					gd.drawImage(getImage(Level.grid[i][j]), i*40, j*40, null);
-				
 			}
 		}
+		
+		gd.drawImage(getImage("ui"), 0, 480, null);
 	}
 
 	@Override
