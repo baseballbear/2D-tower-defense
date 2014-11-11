@@ -6,6 +6,11 @@ import gamedev.td.GameFrame;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.List;
 
 public class GameScreen extends Screen {
@@ -71,6 +76,34 @@ public class GameScreen extends Screen {
 	
 	private void prepareLevel(String level) {
 		Level.readLevel(level);
+	}
+	
+	// Call every time the player finishes a level
+	private void saveData() {
+		File file = new File("data.dat");
+		try {
+			DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
+			
+			/*
+			 * TODO: Save the progress of the player
+			 * 	- Cleared levels, their scores and clear time 
+			 *  - Ano pa ba?
+			 */
+			
+			/*
+			 * for each cleared level
+			 * 		out.writeInt(score);
+			 * 		out.writeLong(clearTimeInSeconds);
+			 * 
+			 */
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
