@@ -31,6 +31,11 @@ public class GameScreen extends Screen {
 		}
 		
 		gd.drawImage(getImage("ui"), 0, 480, null);
+		
+		// Sample
+		gd.drawImage(getImage("egg"), 40, 520, null);
+		gd.drawImage(getImage("corrupted_egg"), 40*2 + 2, 520, null);
+		
 	}
 
 	@Override

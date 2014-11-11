@@ -42,12 +42,16 @@ public class GameFrame extends Game {
 	private List<ImageResource> initGameImages() {
 		List<ImageResource> gameImages = new ArrayList<>();
 		
+		// Tiles
 		gameImages.add(new ImageResource(getImage("img/grass.png"), "grass", 0));
 		gameImages.add(new ImageResource(getImage("img/dirt_light.png"), "dirt_light", 1));
 		gameImages.add(new ImageResource(getImage("img/dirt_dark.png"), "dirt_dark", 2));
 		gameImages.add(new ImageResource(getImage("img/tower.png"), "tower", 3));
 		
-		gameImages.add(new ImageResource(getImage("img/ui2.png"), "ui", -2));
+		// Use numbers other than 0-9 for images that are not tiles (because those numbers are used in text files that represent the levels
+		gameImages.add(new ImageResource(getImage("img/ui2.png"), "ui", -1));
+		gameImages.add(new ImageResource(getImage("img/egg_tower.png"), "egg", -2));
+		gameImages.add(new ImageResource(getImage("img/corrupted_egg_tower.png"), "corrupted_egg", -3));
 		
 		
 		
