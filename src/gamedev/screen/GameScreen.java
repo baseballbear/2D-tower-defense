@@ -13,17 +13,26 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
 
+import com.golden.gamedev.object.Timer;
+
 public class GameScreen extends Screen {
 
 	List<ImageResource> images;
 	
 	public static int sizeX = 16, sizeY = 12;
-			
-	int currentLevel;
+	
+	int currentLevel, timeInSec;
+	Timer timer;
 	
 	public GameScreen(int screenWidth, int screenHeight, GameFrame gameFrame, List<ImageResource> images) {
 		super(screenWidth, screenHeight, gameFrame);
 		this.images = images;
+	}
+	
+	@Override
+	public void initialize() {
+		timer = new Timer(1000); // 1 sec
+		timeInSec = 0;
 	}
 
 	@Override
@@ -45,7 +54,11 @@ public class GameScreen extends Screen {
 
 	@Override
 	public void update(long time) {
-
+		// If elapsed time reached 1 sec
+		if(timer.action(time)) {
+			timeInSec++;
+			System.out.println(timeInSec);
+		}
 	}
 
 	@Override
@@ -105,5 +118,7 @@ public class GameScreen extends Screen {
 		}
 		
 	}
+
+	
 
 }

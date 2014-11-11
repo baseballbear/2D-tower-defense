@@ -9,6 +9,12 @@ public class GameOverScreen extends Screen {
 	public GameOverScreen(int screenWidth, int screenHeight, GameFrame gameFrame) {
 		super(screenWidth, screenHeight, gameFrame);
 	}
+	
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public void render(Graphics2D gd) {

@@ -10,7 +10,13 @@ public class MainMenuScreen extends Screen {
 		super(screenWidth, screenHeight, gameFrame);
 		
 	}
-
+	
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	@Override
 	public void render(Graphics2D gd) {
 		for (Button button : buttonList) {
@@ -27,5 +33,7 @@ public class MainMenuScreen extends Screen {
 	public void update(long time) {
 		
 	}
+
+	
 
 }

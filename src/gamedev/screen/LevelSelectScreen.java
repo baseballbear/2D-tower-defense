@@ -11,6 +11,11 @@ public class LevelSelectScreen extends Screen {
 	}
 
 	@Override
+	public void initialize() {
+		
+	}
+	
+	@Override
 	public void render(Graphics2D gd) {
 		for (Button button : buttonList) {
 			button.render(gd);
@@ -26,5 +31,6 @@ public class LevelSelectScreen extends Screen {
 	public void update(long time) {
 		
 	}
+
 
 }

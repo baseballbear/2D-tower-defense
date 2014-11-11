@@ -18,6 +18,7 @@ public abstract class Screen {
 		buttonList = new ArrayList<>();
 	}
 	
+	public abstract void initialize();
 	public abstract void render(Graphics2D gd);
 	public abstract void update(long time);
 	public abstract void input(int mouseX, int mouseY);

@@ -36,6 +36,8 @@ public class GameFrame extends Game {
 		gameScreen = new GameScreen(this.getWidth(), this.getHeight(), this, initGameImages());
 		
 		currentScreen = gameScreen;
+		currentScreen.initialize();
+		
 		gameScreen.setLevel(1);
 	}
 	
@@ -68,6 +70,7 @@ public class GameFrame extends Game {
 
 	@Override
 	public void update(long time) {
+		currentScreen.update(time);
 		getInput();
 	}
 	
