@@ -7,7 +7,7 @@ import com.golden.gamedev.object.Sprite;
 public abstract class Tower extends Sprite{
 	
 	protected int price, attackDamage;
-	protected float attackRate; //attacks per second
+	protected float attackRate, range; //attacks per second, attack range
 	protected String name, attackType; //elements i.e. fire, water, etc.
 	
 	// initial values
@@ -15,6 +15,7 @@ public abstract class Tower extends Sprite{
 		price = 0;
 		attackDamage = 0;
 		attackRate = 0;
+		range = 0;
 		name = "";
 		attackType = "";
 	}

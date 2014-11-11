@@ -88,6 +88,10 @@ public class GameFrame extends Game {
 		else if(currentScreen instanceof GameScreen) {
 			if(click())
 				System.out.println(getMouseX() + ", " + getMouseY());
+			
+			// Remove whatever the mouse cursor is holding
+			if(rightClick())
+				((GameScreen)currentScreen).setHoldingTower(null);
 		}
 		else if(currentScreen instanceof GameOverScreen) {
 			

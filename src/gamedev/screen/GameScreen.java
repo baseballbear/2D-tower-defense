@@ -2,6 +2,7 @@ package gamedev.screen;
 
 import gamedev.entity.ImageResource;
 import gamedev.entity.Level;
+import gamedev.entity.Tower;
 import gamedev.td.GameFrame;
 
 import java.awt.Graphics2D;
@@ -11,6 +12,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.golden.gamedev.object.Timer;
@@ -18,6 +20,7 @@ import com.golden.gamedev.object.Timer;
 public class GameScreen extends Screen {
 
 	List<ImageResource> images;
+	List<Tower> towersDeployed;
 	
 	public static int sizeX = 16, sizeY = 12;
 	
@@ -27,6 +30,7 @@ public class GameScreen extends Screen {
 	public GameScreen(int screenWidth, int screenHeight, GameFrame gameFrame, List<ImageResource> images) {
 		super(screenWidth, screenHeight, gameFrame);
 		this.images = images;
+		towersDeployed = new ArrayList<>();
 	}
 	
 	@Override
@@ -118,7 +122,10 @@ public class GameScreen extends Screen {
 		}
 		
 	}
-
 	
+	// Set whether the mouse cursor will hold a tower (tower to be put)
+	public void setHoldingTower(Tower tower) {
+		
+	}
 
 }
