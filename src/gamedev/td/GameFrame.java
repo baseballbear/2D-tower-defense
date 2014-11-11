@@ -17,7 +17,7 @@ import com.golden.gamedev.Game;
 public class GameFrame extends Game {
 
 	{
-//		distribute = true;
+		distribute = true;
 	}
 	
 	// Screens
@@ -61,11 +61,14 @@ public class GameFrame extends Game {
 	@Override
 	public void render(Graphics2D gd) {
 		currentScreen.render(gd);
+		
+		if(distribute)
+			gd.drawImage(getImage("img/cursor.png"), getMouseX(), getMouseY(), null);
 	}
 
 	@Override
 	public void update(long time) {
-		
+		getInput();
 	}
 	
 	public void getInput() {
@@ -78,6 +81,10 @@ public class GameFrame extends Game {
 		}
 		else if(currentScreen instanceof LevelSelectScreen) {
 			
+		}
+		else if(currentScreen instanceof GameScreen) {
+			if(click())
+				System.out.println(getMouseX() + ", " + getMouseY());
 		}
 		else if(currentScreen instanceof GameOverScreen) {
 			
